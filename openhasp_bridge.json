@@ -7,6 +7,10 @@
     "hasp_dev":["wozi"],
     "hasp_color":["black","#404000"],
     "tuya_pre":"tuya",
+    "debug":{
+            "loglevel":"INFO",
+	    "filename":"debug.out"
+    },
     "hasp_details":{
 	"wozi":{
 	    "page":"5",
