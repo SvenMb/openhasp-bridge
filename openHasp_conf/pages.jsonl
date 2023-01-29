@@ -1,0 +1,126 @@
+{"page":1,"comment":"---------- Page 1 Status ----------"}
+{"page":1,"id":0,"bg_color":"black"}
+{"page":1,"id": 10,"w": 320,"x": 0,"obj": "label","text": "Panel"}
+{"page":1,"id": 11,"w": 320,"x": 40,"y": 0,"obj": "label","text": "%hostname%"}
+{"page":1,"id": 20,"w": 320,"y": 32,"obj": "label","text": "Warte auf Netzwerk..."}
+
+{"page":2,"comment":"---------- Page 2 Lampen ----------"}
+{"page":2,"id":0,"bg_color00":"black"}
+{"page":2,"id":10,"obj":"btn","x":0  ,"y":0  ,"w":118,"h":95,"toggle":true,"text":"Decke","text_font":16,"radius":10,"border_color":"white","border_width":2,"text_color01":"yellow","bg_color":"black","groupid":1}
+{"page":2,"id":11,"parentid":10,"obj":"label","x":0,"y":0,"w":118,"h":32,"text":"\uE769","text_font":32, "align":"center"}
+{"page":2,"id":12,"parentid":10,"obj":"label","x":0,"y":0,"w":118,"h":18,"text":"","text_font":16, "align":"center"}
+
+{"page":2,"id":20,"obj":"btn","x":121,"y":0  ,"w":118,"h":95,"toggle":true,"text":"Standleuchte","text_font":16,"radius":10,"border_color":"white","border_width":2,"text_color01":"yellow","bg_color":"black"}
+{"page":2,"id":21,"parentid":20,"obj":"label","x":0,"y":0,"w":118,"h":32,"text":"\uE95F","text_font":32, "align":"center"}
+{"page":2,"id":22,"parentid":20,"obj":"label","x":0,"y":0,"w":118,"h":18,"text":"unbekannt","text_font":16, "align":"center"}
+
+{"page":2,"id":30,"obj":"btn","x":0  ,"y":97 ,"w":118,"h":95,"toggle":true,"text":"Vorne","text_font":16,"radius":10,"border_color":"white","border_width":2,"text_color01":"yellow","bg_color":"black"}
+{"page":2,"id":31,"parentid":30,"obj":"label","x":0,"y":0,"w":118,"h":32,"text":"\uE8DD","text_font":32, "align":"center"}
+{"page":2,"id":32,"parentid":30,"obj":"label","x":0,"y":0,"w":118,"h":18,"text":"unbekannt","text_font":16, "align":"center"}
+
+{"page":2,"id":40,"obj":"btn","x":121,"y":97 ,"w":118,"h":95,"toggle":true,"text":"Ambiente","text_font":16,"radius":10,"border_color":"white","border_width":2,"text_color01":"yellow","bg_color":"black"}
+{"page":2,"id":41,"parentid":40,"obj":"label","x":0,"y":0,"w":118,"h":32,"text":"\uF2BA","text_font":32, "align":"center"}
+{"page":2,"id":42,"parentid":40,"obj":"label","x":0,"y":0,"w":118,"h":18,"text":"unbekannt","text_font":16, "align":"center"}
+
+{"page":2,"id":50,"obj":"btn","x":0  ,"y":194,"w":118,"h":95,"toggle":true,"text":"Esszimmer","text_font":16,"radius":10,"border_color":"white","border_width":2,"text_color01":"yellow","bg_color":"black"}
+{"page":2,"id":51,"parentid":50,"obj":"label","x":0,"y":0,"w":118,"h":32,"text":"\uF1E1","text_font":32, "align":"center"}
+{"page":2,"id":52,"parentid":50,"obj":"label","x":0,"y":0,"w":118,"h":18,"text":"unbekannt","text_font":16, "align":"center"}
+
+{"page":2,"id":60,"obj":"obj","x":121  ,"y":194,"w":118,"h":95,"bg_color":"black", "border_side":0}
+{"page":2,"id":61,"parentid":60,"obj":"label","x":12,"y":8, "w":100,"h":32,"text":"\uE50F ---","text_font":24, "align":"left"}
+{"page":2,"id":62,"parentid":60,"obj":"label","x":12,"y":40,"w":100,"h":32,"text":"\uE58E ---","text_font":24, "align":"left"}
+
+{"page":3,"comment":"---------- Page 3 Tiere ----------"}
+{"page":3,"id":0,"bg_color":"#002000","click":0}
+{"page":3,"id":1,"obj":"label","x":5,"y":0,"w":230,"h":40,"text":"Tiere", "text_font": 32,"align":"center"}
+
+
+{"page":3,"id":10,"obj":"btn","x":5,"y":50,"w":230,"h":75,"radius":10,"toggle":true,"border_side":0}
+{"page":3,"id":11,"parentid":10,"obj":"obj","w":230,"h":75,"radius":10,"click":0,"border_side":0,"bg_color":"#101010"}
+{"page":3,"id":12,"parentid":11,"obj":"obj","x":5,"y":5,"w":65,"h":65,"radius":35,"border_side":0,"bg_color":"black","click":0}
+{"page":3,"id":13,"parentid":11,"obj":"img","x":24,"y":20,"h":100,"src":"L:/fische.bin","click":0}
+{"page":3,"id":14,"parentid":11,"obj":"label","x":95,"y":10,"w":200,"h":40,"text":"Fische", "text_font": 24}
+{"page":3,"id":15,"parentid":11,"obj":"label","x":95,"y":35,"w":200,"h":40,"text":"unbekannt", "text_font": 24, "text_color":"#9b9b9b"}
+{"page":3,"id":16,"parentid":10,"obj":"label","text":""}
+
+{"page":3,"id":20,"obj":"btn","x":5,"y":130,"w":230,"h":75,"radius":10,"toggle":true,"border_side":0}
+{"page":3,"id":21,"parentid":20,"obj":"obj","w":230,"h":75,"radius":10,"click":0,"border_side":0,"bg_color":"#101010"}
+{"page":3,"id":22,"parentid":21,"obj":"obj","x":5,"y":5,"w":65,"h":65,"radius":35,"border_side":0,"bg_color":"black","click":0}
+{"page":3,"id":23,"parentid":21,"obj":"img","x":24,"y":20,"h":100,"src":"L:/snake.bin","click":0}
+{"page":3,"id":24,"parentid":21,"obj":"label","x":95,"y":10,"w":200,"h":40,"text":"Horst", "text_font": 24}
+{"page":3,"id":25,"parentid":21,"obj":"label","x":95,"y":35,"w":200,"h":40,"text":"unbekannt", "text_font": 24, "text_color":"#9b9b9b"}
+{"page":3,"id":26,"parentid":20,"obj":"label","text":""}
+
+{"page":3,"id":30,"obj":"btn","x":5,"y":210,"w":230,"h":75,"radius":10,"toggle":true,"border_side":0}
+{"page":3,"id":31,"parentid":30,"obj":"obj","w":230,"h":75,"radius":10,"click":0,"border_side":0,"bg_color":"#101010"}
+{"page":3,"id":32,"parentid":31,"obj":"obj","x":5,"y":5,"w":65,"h":65,"radius":35,"border_side":0,"bg_color":"black","click":0}
+{"page":3,"id":33,"parentid":31,"obj":"img","x":24,"y":20,"h":100,"src":"L:/lizard.bin","click":0}
+{"page":3,"id":34,"parentid":31,"obj":"label","x":95,"y":10,"w":200,"h":40,"text":"Ozzi", "text_font": 24}
+{"page":3,"id":35,"parentid":31,"obj":"label","x":95,"y":35,"w":200,"h":40,"text":"unbekannt", "text_font": 24, "text_color":"#9b9b9b"}
+{"page":3,"id":36,"parentid":30,"obj":"label","text":""}
+
+{"page":4,"comment":"---------- Page 4 Helligkeit/Farben Wohnzimmer ----------"}
+{"page":4,"id":0,"bg_color":"#000020","click":0}
+{"page":4,"id":1,"obj":"label","x":5,"y":0,"w":230,"h":40,"text":"Sonstiges", "text_font": 32,"align":"center"}
+
+
+{"page":4,"id":10,"obj":"btn","x":5,"y":50,"w":230,"h":75,"radius":10,"toggle":true,"border_side":0}
+{"page":4,"id":11,"parentid":10,"obj":"obj","w":230,"h":75,"radius":10,"click":0,"border_side":0,"bg_color":"#101010"}
+{"page":4,"id":12,"parentid":11,"obj":"obj","x":5,"y":5,"w":65,"h":65,"radius":35,"border_side":0,"bg_color":"black","click":0}
+{"page":4,"id":13,"parentid":11,"obj":"img","x":24,"y":20,"h":100,"src":"L:/pool.bin","click":0}
+{"page":4,"id":14,"parentid":11,"obj":"label","x":95,"y":10,"w":200,"h":40,"text":"Pool", "text_font": 24}
+{"page":4,"id":15,"parentid":11,"obj":"label","x":95,"y":35,"w":200,"h":40,"text":"unbekannt", "text_font": 24, "text_color":"#9b9b9b"}
+{"page":4,"id":16,"parentid":10,"obj":"label","text":""}
+
+{"page":4,"id":20,"obj":"btn","x":5,"y":130,"w":230,"h":75,"radius":10,"toggle":true,"border_side":0}
+{"page":4,"id":21,"parentid":20,"obj":"obj","w":230,"h":75,"radius":10,"click":0,"border_side":0,"bg_color":"#101010"}
+{"page":4,"id":22,"parentid":21,"obj":"obj","x":5,"y":5,"w":65,"h":65,"radius":35,"border_side":0,"bg_color":"black","click":0}
+{"page":4,"id":23,"parentid":21,"obj":"img","x":24,"y":20,"h":100,"src":"L:/3d.bin","click":0}
+{"page":4,"id":24,"parentid":21,"obj":"label","x":95,"y":10,"w":200,"h":40,"text":"3D-Drucker", "text_font": 24}
+{"page":4,"id":25,"parentid":21,"obj":"label","x":95,"y":35,"w":200,"h":40,"text":"unbekannt", "text_font": 24, "text_color":"#9b9b9b"}
+{"page":4,"id":26,"parentid":20,"obj":"label","text":""}
+
+{"page":4,"id":30,"obj":"btn","x":5,"y":210,"w":230,"h":75,"radius":10,"toggle":true,"border_side":0}
+{"page":4,"id":31,"parentid":30,"obj":"obj","w":230,"h":75,"radius":10,"click":0,"border_side":0,"bg_color":"#101010"}
+{"page":4,"id":32,"parentid":31,"obj":"obj","x":5,"y":5,"w":65,"h":65,"radius":35,"border_side":0,"bg_color":"black","click":0}
+{"page":4,"id":33,"parentid":31,"obj":"img","x":24,"y":20,"h":100,"src":"L:/tree.bin","click":0}
+{"page":4,"id":34,"parentid":31,"obj":"label","x":95,"y":10,"w":200,"h":40,"text":"Baum", "text_font": 24}
+{"page":4,"id":35,"parentid":31,"obj":"label","x":95,"y":35,"w":200,"h":40,"text":"unbekannt", "text_font": 24, "text_color":"#9b9b9b"}
+{"page":4,"id":36,"parentid":30,"obj":"label","text":""}
+
+{"page":5,"comment":"---------- Page 5 Helligkeit/Farben ----------"}
+{"page":5,"id":0,"bg_color":"#000000","click":0}
+{"page":5,"id":1,"obj":"label","x":5,"y":0,"w":230,"h":36,"text":"Esszimmer", "text_font": 32,"align":"center"}
+
+{"page":5,"id":20,"obj":"obj","x":0,"y":40,"w":240,"h":248,"radius":10,"click":0,"border_side":0,"bg_color":"#101010","click":0}
+{"page":5,"id":21,"parentid":20,"obj":"label","x":0,"y":15,"w":118,"h":32,"text":"\uE6E8","text_font":24,"click":0}
+{"page":5,"id":22,"parentid":20,"obj":"slider" ,"x":45,"y":20,"w":180,"h":20}
+{"page":5,"id":23,"parentid":20,"obj":"label","x":0,"y":55,"w":118,"h":32,"text":"\uE50F","text_font":24,"click":0}
+{"page":5,"id":24,"parentid":20,"obj":"slider" ,"x":45,"y":60,"w":180,"h":20}
+{"page":5,"id":25,"parentid":20,"obj":"cpicker","x":15,"y":100,"w":140,"h":140}
+{"page":5,"id":26,"parentid":20,"obj":"label","x":168,"y":90,"w":118,"h":32,"text":"\uE6E8","text_font":24,"click":0}
+{"page":5,"id":27,"parentid":20,"obj":"slider" ,"x":170,"y":125,"w":20,"h":100}
+{"page":5,"id":28,"parentid":20,"obj":"label","x":204,"y":87,"w":118,"h":32,"text":"\uE58C","text_font":32,"click":0}
+{"page":5,"id":29,"parentid":20,"obj":"slider" ,"x":210,"y":125,"w":20,"h":100}
+
+
+
+{"page":0,"comment":"---------- All Pages ----------"}
+{"page":0,"id":0,"border_color":"white"}
+{"page":0,"id":7,"obj":"btn","action":"prev","x":0,"y":291,"w":79,"h":29,"text":"\uE141","text_color":"#FFFFFF","radius":0,"border_side":0,"text_font":32}
+{"page":0,"id":8,"obj":"btn","action":"back","x":80,"y":291,"w":80,"h":29,"text":"\uE2DC","text_color":"#FFFFFF","radius":0,"border_side":0,"text_font":24}
+{"page":0,"id":9,"obj":"btn","action":"next","x":161,"y":291,"w":79,"h":29,"text":"\uE142","text_color":"#FFFFFF","radius":0,"border_side":0,"text_font":32}
+
+{"comment":"---------- Limit page prev/next between 1 and 4 ----------"}
+{"page":2,"id":0,"back":2}
+{"page":3,"id":0,"back":2}
+{"page":4,"id":0,"back":2}
+{"page":5,"id":0,"back":2}
+{"page":1,"id":0,"prev":4}
+{"page":2,"id":0,"prev":4}
+{"page":4,"id":0,"next":2}
+{"page":5,"id":0,"prev":2}
+{"page":5,"id":0,"next":2}
+
+
+

@@ -1,0 +1,15 @@
+Rule1
+  ON POWER2#state=1 DO publish hasp/wozi/command/output13 {"state":"on"} ENDON
+  ON POWER2#state=0 DO publish hasp/wozi/command/output13 {"state":"off"} ENDON
+  ON POWER3#state=1 DO publish tuya/standleuchte/command on ENDON
+  ON POWER3#state=0 DO publish tuya/standleuchte/command off ENDON
+  ON POWER4#state=1 DO publish tuya/ambiente/command on ENDON
+  ON POWER4#state=0 DO publish tuya/ambiente/command off ENDON
+
+
+Rule1
+  ON POWER2#state=1 DO Backlog publish tuya/vorne_1/command on; publish tuya/vorne_2/command on; publish tuya/vorne_3/command on ENDON
+  ON POWER2#state=0 DO Backlog publish tuya/vorne_1/command off; publish tuya/vorne_2/command off; publish tuya/vorne_3/command off ENDON
+  ON POWER3#state=1 DO Backlog publish tuya/esszimmer_1/command on; publish tuya/esszimmer_2/command on; publish tuya/esszimmer_3/command on; publish tuya/esszimmer_4/command on; publish tuya/esszimmer_5/command on ENDON
+  ON POWER3#state=0 DO Backlog publish tuya/esszimmer_1/command off; publish tuya/esszimmer_2/command off; publish tuya/esszimmer_3/command off; publish tuya/esszimmer_4/command off; publish tuya/esszimmer_5/command off ENDON
+
