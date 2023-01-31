@@ -9,7 +9,7 @@
     "tuya_pre":"tuya",
     "debug":{
             "loglevel":"INFO",
-	    "filename":"debug.out"
+	    "logfile":"debug.out"
     },
     "hasp_details":{
 	"wozi":{

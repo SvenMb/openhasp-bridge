@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import logging
+import argparse
 import paho.mqtt.client as mqtt
 import time
 import json
@@ -81,9 +82,9 @@ def on_haspButton(mosq,obj,msg):
         return
     p=time.time()-button[panel+event]
     t=hasp_thing[panel][event]
-    if p>1 and p<5 and json.loads(stat)["val"]==0:
+    if p>0.8 and p<5 and json.loads(stat)["val"]==0:
         devtype=cfg["dev"][cfg["thing"][t]["dev"][0]]["type"]
-        logging.info("long press "+p+" "+t+" "+devtype)
+        logging.info("long press "+str(p)+" "+t+" "+devtype)
         if devtype in ["tuya","tuyargb","tuyargbw","tuyaw"]:
             lp[panel]=t
             # restore state
@@ -126,7 +127,7 @@ def on_haspButton(mosq,obj,msg):
             client.publish(hasp_pre+"/"+panel+"/command/page",cfg["hasp_details"][panel]["page"])
             haspShow(t)
         return
-    logging.info("short press "+p)    
+    logging.info("short press "+str(p))
     # take care of special buttons, to get 'immediate' feedback
     #if cfg["hasp"][panel][event]["type"]=="sp1button":
     #    client.publish(hasp_pre+"/"+panel+"/command/"+cfg["hasp"][panel][event]["color"],cfg["hasp_color"][json.loads(stat)["val"]])
@@ -143,10 +144,10 @@ def on_haspButton(mosq,obj,msg):
             client.publish(tuya_pre+"/"+d+"/command",m)
     # Steckdose
         elif cfg["dev"][d]["type"] in ["sp1"]:
-            logging.info("SP1: "+d+" "+json.loads(stat)["val"])
+            logging.info("SP1: "+d+" "+str(json.loads(stat)["val"]))
             client.publish("cmnd/"+d+"/POWER",m)
         elif cfg["dev"][d]["type"] in ["slave"]:
-            logging.info("Slave: "+d+" "+cfg["dev"][d]["mqtt"]+" "+json.loads(stat)["val"])
+            logging.info("Slave: "+d+" "+cfg["dev"][d]["mqtt"]+" "+str(json.loads(stat)["val"]))
             client.publish(cfg["dev"][d]["mqtt"],m)
         else:
             logging.info("unknown device type for: "+t)
@@ -470,19 +471,33 @@ def on_Connect(mosq,obj,msg):
 # Start 
 # --------------------------------
 
-with open('openhasp_bridge.json') as cfg_file:
+parser = argparse.ArgumentParser()
+parser.add_argument('-c', '--config', required=False, default="openhasp_bridge.json")
+parser.add_argument('-l', '--loglevel', required=False, default=None)
+parser.add_argument('-f', '--logfile', required=False, default=None)
+args, unknown = parser.parse_known_args()
+
+
+with open(args.config) as cfg_file:
   cfg=json.load(cfg_file)
 
 
 # logging.basicConfig(filename='example.log', encoding='utf-8', level=logging.DEBUG)
-loglevel=cfg["debug"]["loglevel"]
+loglevel=args.loglevel
+if loglevel is None:
+    loglevel=cfg["debug"]["loglevel"]
 numeric_level = getattr(logging, loglevel.upper(), None)
 if not isinstance(numeric_level, int):
     raise ValueError('Invalid log level: %s' % loglevel)
-if "filename" in cfg["debug"].keys():
-    logging.basicConfig(filename=cfg["debug"]["filename"],encoding='utf-8', level=numeric_level)
-else:
+
+logfile=args.logfile
+if logfile is None:
+    if "logfile" in cfg["debug"].keys():
+        logfile=cfg["debug"]["logfile"]
+if logfile is None:
     logging.basicConfig(encoding='utf-8', level=numeric_level)
+else:
+    logging.basicConfig(filename=cfg["debug"]["filename"],encoding='utf-8', level=numeric_level)
 
 # print ("config:",cfg)
 
