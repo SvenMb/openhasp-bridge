@@ -59,7 +59,7 @@
 {"page":3,"id":35,"parentid":31,"obj":"label","x":95,"y":35,"w":200,"h":40,"text":"unbekannt", "text_font": 24, "text_color":"#9b9b9b"}
 {"page":3,"id":36,"parentid":30,"obj":"label","text":""}
 
-{"page":4,"comment":"---------- Page 4 Helligkeit/Farben Wohnzimmer ----------"}
+{"page":4,"comment":"---------- Page 4 Sonstiges 1 ----------"}
 {"page":4,"id":0,"bg_color":"#000020","click":0}
 {"page":4,"id":1,"obj":"label","x":5,"y":0,"w":230,"h":40,"text":"Sonstiges", "text_font": 32,"align":"center"}
 
@@ -88,20 +88,67 @@
 {"page":4,"id":35,"parentid":31,"obj":"label","x":95,"y":35,"w":200,"h":40,"text":"unbekannt", "text_font": 24, "text_color":"#9b9b9b"}
 {"page":4,"id":36,"parentid":30,"obj":"label","text":""}
 
-{"page":5,"comment":"---------- Page 5 Helligkeit/Farben ----------"}
-{"page":5,"id":0,"bg_color":"#000000","click":0}
-{"page":5,"id":1,"obj":"label","x":5,"y":0,"w":230,"h":36,"text":"Esszimmer", "text_font": 32,"align":"center"}
+{"page":5,"comment":"---------- Page 5 Sonstiges 2 ----------"}
+{"page":5,"id":0,"bg_color":"#200000","click":0}
+{"page":5,"id":1,"obj":"label","x":5,"y":0,"w":230,"h":40,"text":"Sonstiges2", "text_font": 32,"align":"center"}
 
-{"page":5,"id":20,"obj":"obj","x":0,"y":40,"w":240,"h":248,"radius":10,"click":0,"border_side":0,"bg_color":"#101010","click":0}
-{"page":5,"id":21,"parentid":20,"obj":"label","x":0,"y":15,"w":118,"h":32,"text":"\uE6E8","text_font":24,"click":0}
-{"page":5,"id":22,"parentid":20,"obj":"slider" ,"x":45,"y":20,"w":180,"h":20}
-{"page":5,"id":23,"parentid":20,"obj":"label","x":0,"y":55,"w":118,"h":32,"text":"\uE50F","text_font":24,"click":0}
-{"page":5,"id":24,"parentid":20,"obj":"slider" ,"x":45,"y":60,"w":180,"h":20}
-{"page":5,"id":25,"parentid":20,"obj":"cpicker","x":15,"y":100,"w":140,"h":140}
-{"page":5,"id":26,"parentid":20,"obj":"label","x":168,"y":90,"w":118,"h":32,"text":"\uE6E8","text_font":24,"click":0}
-{"page":5,"id":27,"parentid":20,"obj":"slider" ,"x":170,"y":125,"w":20,"h":100}
-{"page":5,"id":28,"parentid":20,"obj":"label","x":204,"y":87,"w":118,"h":32,"text":"\uE58C","text_font":32,"click":0}
-{"page":5,"id":29,"parentid":20,"obj":"slider" ,"x":210,"y":125,"w":20,"h":100}
+
+{"page":5,"id":10,"obj":"btn","x":5,"y":50,"w":230,"h":75,"radius":10,"toggle":true,"border_side":0}
+{"page":5,"id":11,"parentid":10,"obj":"obj","w":230,"h":75,"radius":10,"click":0,"border_side":0,"bg_color":"#101010"}
+{"page":5,"id":12,"parentid":11,"obj":"obj","x":5,"y":5,"w":65,"h":65,"radius":35,"border_side":0,"bg_color":"black","click":0}
+{"page":5,"id":13,"parentid":11,"obj":"img","x":24,"y":20,"h":100,"src":"L:/pool.bin","click":0}
+{"page":5,"id":14,"parentid":11,"obj":"label","x":95,"y":10,"w":200,"h":40,"text":"Fernseher", "text_font": 24}
+{"page":5,"id":15,"parentid":11,"obj":"label","x":95,"y":35,"w":200,"h":40,"text":"unbekannt", "text_font": 24, "text_color":"#9b9b9b"}
+{"page":5,"id":16,"parentid":10,"obj":"label","text":""}
+
+{"page":5,"id":20,"obj":"btn","x":5,"y":130,"w":230,"h":75,"radius":10,"toggle":true,"border_side":0}
+{"page":5,"id":21,"parentid":20,"obj":"obj","w":230,"h":75,"radius":10,"click":0,"border_side":0,"bg_color":"#101010"}
+{"page":5,"id":22,"parentid":21,"obj":"obj","x":5,"y":5,"w":65,"h":65,"radius":35,"border_side":0,"bg_color":"black","click":0}
+{"page":5,"id":23,"parentid":21,"obj":"img","x":24,"y":20,"h":100,"src":"L:/3d.bin","click":0}
+{"page":5,"id":24,"parentid":21,"obj":"label","x":95,"y":10,"w":200,"h":40,"text":"Computer Sven", "text_font": 24}
+{"page":5,"id":25,"parentid":21,"obj":"label","x":95,"y":35,"w":200,"h":40,"text":"unbekannt", "text_font": 24, "text_color":"#9b9b9b"}
+{"page":5,"id":26,"parentid":20,"obj":"label","text":""}
+
+{"page":5,"id":30,"obj":"btn","x":5,"y":210,"w":230,"h":75,"radius":10,"toggle":true,"border_side":0}
+{"page":5,"id":31,"parentid":30,"obj":"obj","w":230,"h":75,"radius":10,"click":0,"border_side":0,"bg_color":"#101010"}
+{"page":5,"id":32,"parentid":31,"obj":"obj","x":5,"y":5,"w":65,"h":65,"radius":35,"border_side":0,"bg_color":"black","click":0}
+{"page":5,"id":33,"parentid":31,"obj":"img","x":24,"y":20,"h":100,"src":"L:/tree.bin","click":0}
+{"page":5,"id":34,"parentid":31,"obj":"label","x":95,"y":10,"w":200,"h":40,"text":"Computer Tina", "text_font": 24}
+{"page":5,"id":35,"parentid":31,"obj":"label","x":95,"y":35,"w":200,"h":40,"text":"unbekannt", "text_font": 24, "text_color":"#9b9b9b"}
+{"page":5,"id":36,"parentid":30,"obj":"label","text":""}
+
+{"page":6,"comment":"---------- Page 6 Radio ----------"}
+{"page":6,"id":0,"bg_color":"#202020","click":0}
+{"page":6,"id":1,"obj":"label","x":5,"y":0,"w":230,"h":40,"text":"Radio", "text_font": 32,"align":"center"}
+{"page":6,"id":2,"obj":"btn","x":0,"y":45,"w":118,"h":40,  "text":"Antenne Bayern","toggle":true, "text_font": 18}
+{"page":6,"id":3,"obj":"btn","x":122,"y":45,"w":118,"h":40,"text":"Rockradio.de",   "text_font": 18}
+
+{"page":6,"id":15,"obj":"dropdown","x":8,"y":129,"w":110,"h":30,"options":"Antenne Bayern\nRockRadio.de\nBayern 1\nBayern 3\nRadio Paradise\n","direction":3,"max_height":300,"radius":5}
+{"page":6,"id":16,"comment":"dropdown","x":133,"y":129,"w":75,"h":30,"options":"Jazz\nPop\nRock","direction":2,"radius":5}
+{"page":6,"id":17,"obj":"btn","x":8,"y":166,"w":50,"h":70,"toggle":false,"text":"\uE4AE","text_font":32}
+{"page":6,"id":18,"obj":"btn","x":66,"y":166,"w":83,"h":70,"toggle":false,"text":"\uE40A","text_font":32}
+{"page":6,"id":19,"obj":"btn","x":157,"y":166,"w":51,"h":70,"toggle":false,"text":"\uE4AD","text_font":32}
+{"page":6,"id":20,"comment":"slider","x":212,"y":38,"w":20,"h":244,"min":0,"max":100,"val":85}
+{"page":6,"id":21,"obj":"btn","x":8,"y":241,"w":45,"h":40,"toggle":false,"text":"\uE425","text_font":32}
+{"page":6,"id":22,"obj":"btn","x":60,"y":241,"w":45,"h":40,"toggle":false,"text":"\uE457","text_font":32}
+{"page":6,"id":23,"obj":"btn","x":111,"y":241,"w":45,"h":40,"toggle":false,"text":"\uE49E","text_font":32}
+{"page":6,"id":24,"obj":"btn","x":163,"y":241,"w":45,"h":40,"toggle":false,"text":"\uE57E","text_font":32}
+
+
+{"page":7,"comment":"---------- Page 5 Helligkeit/Farben ----------"}
+{"page":7,"id":0,"bg_color":"#000000","click":0}
+{"page":7,"id":1,"obj":"label","x":5,"y":0,"w":230,"h":36,"text":"Esszimmer", "text_font": 32,"align":"center"}
+
+{"page":7,"id":20,"obj":"obj","x":0,"y":40,"w":240,"h":248,"radius":10,"click":0,"border_side":0,"bg_color":"#101010","click":0}
+{"page":7,"id":21,"parentid":20,"obj":"label","x":0,"y":15,"w":118,"h":32,"text":"\uE6E8","text_font":24,"click":0}
+{"page":7,"id":22,"parentid":20,"obj":"slider" ,"x":45,"y":20,"w":180,"h":20}
+{"page":7,"id":23,"parentid":20,"obj":"label","x":0,"y":55,"w":118,"h":32,"text":"\uE50F","text_font":24,"click":0}
+{"page":7,"id":24,"parentid":20,"obj":"slider" ,"x":45,"y":60,"w":180,"h":20}
+{"page":7,"id":25,"parentid":20,"obj":"cpicker","x":15,"y":100,"w":140,"h":140}
+{"page":7,"id":26,"parentid":20,"obj":"label","x":168,"y":90,"w":118,"h":32,"text":"\uE6E8","text_font":24,"click":0}
+{"page":7,"id":27,"parentid":20,"obj":"slider" ,"x":170,"y":125,"w":20,"h":100}
+{"page":7,"id":28,"parentid":20,"obj":"label","x":204,"y":87,"w":118,"h":32,"text":"\uE58C","text_font":32,"click":0}
+{"page":7,"id":29,"parentid":20,"obj":"slider" ,"x":210,"y":125,"w":20,"h":100}
 
 
 
@@ -116,11 +163,13 @@
 {"page":3,"id":0,"back":2}
 {"page":4,"id":0,"back":2}
 {"page":5,"id":0,"back":2}
-{"page":1,"id":0,"prev":4}
-{"page":2,"id":0,"prev":4}
-{"page":4,"id":0,"next":2}
-{"page":5,"id":0,"prev":2}
-{"page":5,"id":0,"next":2}
+{"page":6,"id":0,"back":2}
+{"page":7,"id":0,"back":2}
+{"page":1,"id":0,"prev":6}
+{"page":2,"id":0,"prev":6}
+{"page":6,"id":0,"next":2}
+{"page":7,"id":0,"prev":2}
+{"page":7,"id":0,"next":2}
 
 
 

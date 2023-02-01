@@ -66,7 +66,7 @@ def on_haspPAGE(mosq,obj,msg):
     logging.info("PAGE: "+panel+" "+stat)
     # remove this panel from lp (long_press)
     if stat!=cfg["hasp_details"][panel]["page"] and panel in lp.keys():
-        print("Details off: ",panel,stat)
+        logging.info("Details off: "+panel+" "+stat)
         lp.pop(panel,"")
 
 def on_haspButton(mosq,obj,msg):
@@ -497,7 +497,7 @@ if logfile is None:
 if logfile is None:
     logging.basicConfig(encoding='utf-8', level=numeric_level)
 else:
-    logging.basicConfig(filename=cfg["debug"]["filename"],encoding='utf-8', level=numeric_level)
+    logging.basicConfig(filename=logfile,encoding='utf-8', level=numeric_level)
 
 # print ("config:",cfg)
 
@@ -617,6 +617,7 @@ for t in cfg["thing"].keys():
     elif cfg["dev"][d]["type"] in ["sp1"]:
         logging.info("on_SP1state cmnd/"+d+"/state")
         client.message_callback_add("stat/"+d+"/POWER", on_SP1Power)
+        client.message_callback_add("stat/"+d+"/POWER1", on_SP1Power)
         client.message_callback_add("stat/"+d+"/STATUS8", on_SP1Status8)
         client.message_callback_add("tele/"+d+"/STATE", on_SP1State)
         client.message_callback_add("tele/"+d+"/SENSOR", on_SP1Sensor)

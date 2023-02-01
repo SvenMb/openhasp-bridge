@@ -13,17 +13,17 @@
     },
     "hasp_details":{
 	"wozi":{
-	    "page":"5",
-	    "text":"p5b1.text",
-	    "brightness":"p5b22",
-	    "brightness_s":"p5b21",
-	    "color_temp":"p5b24",
-	    "color_temp_s":"p5b23",
-	    "rgb":"p5b25",		
-	    "cbrightness":"p5b27",
-	    "cbrightness_s":"p5b26",
-	    "saturation":"p5b29",
-	    "saturation_s":"p5b28"
+	    "page":"7",
+	    "text":"p7b1.text",
+	    "brightness":"p7b22",
+	    "brightness_s":"p7b21",
+	    "color_temp":"p7b24",
+	    "color_temp_s":"p7b23",
+	    "rgb":"p7b25",
+	    "cbrightness":"p7b27",
+	    "cbrightness_s":"p7b26",
+	    "saturation":"p7b29",
+	    "saturation_s":"p7b28"
 	}
     },
     "hasp":{
