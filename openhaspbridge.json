@@ -9,7 +9,7 @@
     "tuya_pre":"tuya",
     "debug":{
             "loglevel":"INFO",
-	    "logfile":"debug.out"
+	    "comment_logfile":"/var/log/openhaspbridge.log"
     },
     "hasp_details":{
 	"wozi":{
