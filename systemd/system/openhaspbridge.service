@@ -1,0 +1,13 @@
+[Unit]
+Description=OpenHasp Bridge
+After=mosquitto.service
+Requires=mosquitto.service
+
+[Service]
+TimeoutStartSec=0
+Restart=no
+#WorkingDirectory=/
+ExecStart=/usr/local/bin/openhaspbridge.py -c /etc/default/openhaspbridge.json
+
+[Install]
+WantedBy=multi-user.target
