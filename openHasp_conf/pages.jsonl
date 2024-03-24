@@ -46,16 +46,16 @@
 {"page":3,"id":20,"obj":"btn","x":5,"y":130,"w":230,"h":75,"radius":10,"toggle":true,"border_side":0}
 {"page":3,"id":21,"parentid":20,"obj":"obj","w":230,"h":75,"radius":10,"click":0,"border_side":0,"bg_color":"#101010"}
 {"page":3,"id":22,"parentid":21,"obj":"obj","x":5,"y":5,"w":65,"h":65,"radius":35,"border_side":0,"bg_color":"black","click":0}
-{"page":3,"id":23,"parentid":21,"obj":"img","x":24,"y":20,"h":100,"src":"L:/snake.bin","click":0}
-{"page":3,"id":24,"parentid":21,"obj":"label","x":95,"y":10,"w":200,"h":40,"text":"Horst", "text_font": 24}
+{"page":3,"id":23,"parentid":21,"obj":"img","x":24,"y":20,"h":100,"src":"L:/lizard.bin","click":0}
+{"page":3,"id":24,"parentid":21,"obj":"label","x":95,"y":10,"w":200,"h":40,"text":"Ozzi", "text_font": 24}
 {"page":3,"id":25,"parentid":21,"obj":"label","x":95,"y":35,"w":200,"h":40,"text":"unbekannt", "text_font": 24, "text_color":"#9b9b9b"}
 {"page":3,"id":26,"parentid":20,"obj":"label","text":""}
 
 {"page":3,"id":30,"obj":"btn","x":5,"y":210,"w":230,"h":75,"radius":10,"toggle":true,"border_side":0}
 {"page":3,"id":31,"parentid":30,"obj":"obj","w":230,"h":75,"radius":10,"click":0,"border_side":0,"bg_color":"#101010"}
 {"page":3,"id":32,"parentid":31,"obj":"obj","x":5,"y":5,"w":65,"h":65,"radius":35,"border_side":0,"bg_color":"black","click":0}
-{"page":3,"id":33,"parentid":31,"obj":"img","x":24,"y":20,"h":100,"src":"L:/lizard.bin","click":0}
-{"page":3,"id":34,"parentid":31,"obj":"label","x":95,"y":10,"w":200,"h":40,"text":"Ozzi", "text_font": 24}
+{"page":3,"id":33,"parentid":31,"obj":"img","x":24,"y":20,"h":100,"src":"L:/snake.bin","click":0}
+{"page":3,"id":34,"parentid":31,"obj":"label","x":95,"y":10,"w":200,"h":40,"text":"Horst", "text_font": 24}
 {"page":3,"id":35,"parentid":31,"obj":"label","x":95,"y":35,"w":200,"h":40,"text":"unbekannt", "text_font": 24, "text_color":"#9b9b9b"}
 {"page":3,"id":36,"parentid":30,"obj":"label","text":""}
 
@@ -67,24 +67,24 @@
 {"page":4,"id":10,"obj":"btn","x":5,"y":50,"w":230,"h":75,"radius":10,"toggle":true,"border_side":0}
 {"page":4,"id":11,"parentid":10,"obj":"obj","w":230,"h":75,"radius":10,"click":0,"border_side":0,"bg_color":"#101010"}
 {"page":4,"id":12,"parentid":11,"obj":"obj","x":5,"y":5,"w":65,"h":65,"radius":35,"border_side":0,"bg_color":"black","click":0}
-{"page":4,"id":13,"parentid":11,"obj":"img","x":24,"y":20,"h":100,"src":"L:/pool.bin","click":0}
-{"page":4,"id":14,"parentid":11,"obj":"label","x":95,"y":10,"w":200,"h":40,"text":"Pool", "text_font": 24}
+{"page":4,"id":13,"parentid":11,"obj":"img","x":24,"y":20,"h":100,"src":"L:/freezer_small.bin","click":0}
+{"page":4,"id":14,"parentid":11,"obj":"label","x":95,"y":10,"w":200,"h":40,"text":"Kühlschrank", "text_font": 24}
 {"page":4,"id":15,"parentid":11,"obj":"label","x":95,"y":35,"w":200,"h":40,"text":"unbekannt", "text_font": 24, "text_color":"#9b9b9b"}
 {"page":4,"id":16,"parentid":10,"obj":"label","text":""}
 
 {"page":4,"id":20,"obj":"btn","x":5,"y":130,"w":230,"h":75,"radius":10,"toggle":true,"border_side":0}
 {"page":4,"id":21,"parentid":20,"obj":"obj","w":230,"h":75,"radius":10,"click":0,"border_side":0,"bg_color":"#101010"}
 {"page":4,"id":22,"parentid":21,"obj":"obj","x":5,"y":5,"w":65,"h":65,"radius":35,"border_side":0,"bg_color":"black","click":0}
-{"page":4,"id":23,"parentid":21,"obj":"img","x":24,"y":20,"h":100,"src":"L:/3d.bin","click":0}
-{"page":4,"id":24,"parentid":21,"obj":"label","x":95,"y":10,"w":200,"h":40,"text":"3D-Drucker", "text_font": 24}
+{"page":4,"id":23,"parentid":21,"obj":"img","x":24,"y":20,"h":100,"src":"L:/freezer_small.bin","click":0}
+{"page":4,"id":24,"parentid":21,"obj":"label","x":95,"y":10,"w":200,"h":40,"text":"Tiefkühler", "text_font": 24}
 {"page":4,"id":25,"parentid":21,"obj":"label","x":95,"y":35,"w":200,"h":40,"text":"unbekannt", "text_font": 24, "text_color":"#9b9b9b"}
 {"page":4,"id":26,"parentid":20,"obj":"label","text":""}
 
 {"page":4,"id":30,"obj":"btn","x":5,"y":210,"w":230,"h":75,"radius":10,"toggle":true,"border_side":0}
 {"page":4,"id":31,"parentid":30,"obj":"obj","w":230,"h":75,"radius":10,"click":0,"border_side":0,"bg_color":"#101010"}
 {"page":4,"id":32,"parentid":31,"obj":"obj","x":5,"y":5,"w":65,"h":65,"radius":35,"border_side":0,"bg_color":"black","click":0}
-{"page":4,"id":33,"parentid":31,"obj":"img","x":24,"y":20,"h":100,"src":"L:/tree.bin","click":0}
-{"page":4,"id":34,"parentid":31,"obj":"label","x":95,"y":10,"w":200,"h":40,"text":"Baum", "text_font": 24}
+{"page":4,"id":33,"parentid":31,"obj":"img","x":24,"y":20,"h":100,"src":"L:/3d.bin","click":0}
+{"page":4,"id":34,"parentid":31,"obj":"label","x":95,"y":10,"w":200,"h":40,"text":"Esszimmer", "text_font": 24}
 {"page":4,"id":35,"parentid":31,"obj":"label","x":95,"y":35,"w":200,"h":40,"text":"unbekannt", "text_font": 24, "text_color":"#9b9b9b"}
 {"page":4,"id":36,"parentid":30,"obj":"label","text":""}
 
@@ -96,16 +96,16 @@
 {"page":5,"id":10,"obj":"btn","x":5,"y":50,"w":230,"h":75,"radius":10,"toggle":true,"border_side":0}
 {"page":5,"id":11,"parentid":10,"obj":"obj","w":230,"h":75,"radius":10,"click":0,"border_side":0,"bg_color":"#101010"}
 {"page":5,"id":12,"parentid":11,"obj":"obj","x":5,"y":5,"w":65,"h":65,"radius":35,"border_side":0,"bg_color":"black","click":0}
-{"page":5,"id":13,"parentid":11,"obj":"img","x":24,"y":20,"h":100,"src":"L:/pool.bin","click":0}
-{"page":5,"id":14,"parentid":11,"obj":"label","x":95,"y":10,"w":200,"h":40,"text":"Fernseher", "text_font": 24}
+{"page":5,"id":13,"parentid":11,"obj":"img","x":24,"y":20,"h":100,"src":"L:/3d.bin","click":0}
+{"page":5,"id":14,"parentid":11,"obj":"label","x":95,"y":10,"w":200,"h":40,"text":"3D-Drucker", "text_font": 24}
 {"page":5,"id":15,"parentid":11,"obj":"label","x":95,"y":35,"w":200,"h":40,"text":"unbekannt", "text_font": 24, "text_color":"#9b9b9b"}
 {"page":5,"id":16,"parentid":10,"obj":"label","text":""}
 
 {"page":5,"id":20,"obj":"btn","x":5,"y":130,"w":230,"h":75,"radius":10,"toggle":true,"border_side":0}
 {"page":5,"id":21,"parentid":20,"obj":"obj","w":230,"h":75,"radius":10,"click":0,"border_side":0,"bg_color":"#101010"}
 {"page":5,"id":22,"parentid":21,"obj":"obj","x":5,"y":5,"w":65,"h":65,"radius":35,"border_side":0,"bg_color":"black","click":0}
-{"page":5,"id":23,"parentid":21,"obj":"img","x":24,"y":20,"h":100,"src":"L:/3d.bin","click":0}
-{"page":5,"id":24,"parentid":21,"obj":"label","x":95,"y":10,"w":200,"h":40,"text":"Computer Sven", "text_font": 24}
+{"page":5,"id":23,"parentid":21,"obj":"img","x":24,"y":20,"h":100,"src":"L:/pool.bin","click":0}
+{"page":5,"id":24,"parentid":21,"obj":"label","x":95,"y":10,"w":200,"h":40,"text":"Pool", "text_font": 24}
 {"page":5,"id":25,"parentid":21,"obj":"label","x":95,"y":35,"w":200,"h":40,"text":"unbekannt", "text_font": 24, "text_color":"#9b9b9b"}
 {"page":5,"id":26,"parentid":20,"obj":"label","text":""}
 
@@ -113,7 +113,7 @@
 {"page":5,"id":31,"parentid":30,"obj":"obj","w":230,"h":75,"radius":10,"click":0,"border_side":0,"bg_color":"#101010"}
 {"page":5,"id":32,"parentid":31,"obj":"obj","x":5,"y":5,"w":65,"h":65,"radius":35,"border_side":0,"bg_color":"black","click":0}
 {"page":5,"id":33,"parentid":31,"obj":"img","x":24,"y":20,"h":100,"src":"L:/tree.bin","click":0}
-{"page":5,"id":34,"parentid":31,"obj":"label","x":95,"y":10,"w":200,"h":40,"text":"Computer Tina", "text_font": 24}
+{"page":5,"id":34,"parentid":31,"obj":"label","x":95,"y":10,"w":200,"h":40,"text":"Baum", "text_font": 24}
 {"page":5,"id":35,"parentid":31,"obj":"label","x":95,"y":35,"w":200,"h":40,"text":"unbekannt", "text_font": 24, "text_color":"#9b9b9b"}
 {"page":5,"id":36,"parentid":30,"obj":"label","text":""}
 

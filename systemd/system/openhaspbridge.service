@@ -6,8 +6,10 @@ Requires=mosquitto.service
 [Service]
 TimeoutStartSec=0
 Restart=no
-#WorkingDirectory=/
-ExecStart=/usr/local/bin/openhaspbridge.py -c /etc/default/openhaspbridge.json
+# Restart=on-failure
+# RestartSec=5s
+# WorkingDirectory=/
+ExecStart=/usr/local/sbin/openhaspbridge.py -c /etc/default/openhaspbridge.json
 
 [Install]
 WantedBy=multi-user.target

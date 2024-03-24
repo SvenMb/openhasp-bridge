@@ -13,10 +13,13 @@ global lp
 def on_connect(client, userdata, flags, rc):
     logging.info("Connected with result code "+str(rc))
     client.subscribe("hasp/#")
+    for m in cfg["mqtt_pre"]:
+        logging.info("subscribe: "+m+"/#")
+        client.subscribe(m+"/#")
     client.subscribe(cfg["tuya_pre"]+"/#")
     client.subscribe("stat/#")
     client.subscribe("tele/#")
-    
+
 def on_message(client, userdata, message):
     pass # print("received message: " ,str(message.topic),str(message.payload.decode("utf-8")))
 
@@ -44,7 +47,6 @@ def on_haspLWT(mosq,obj,msg):
             client.publish("cmnd/"+d+'/STATUS','8')
             client.publish("cmnd/"+d+'/TelePeriod','30')
 
-            
 
 def on_haspIDLE(mosq,obj,msg):
     panel=msg.topic.split("/")[1]
@@ -71,7 +73,7 @@ def on_haspPAGE(mosq,obj,msg):
 
 def on_haspButton(mosq,obj,msg):
     global lp
-    
+
     panel=msg.topic.split("/")[1]
     event=msg.topic.split("/")[3]
     stat=str(msg.payload.decode("utf-8"))
@@ -210,7 +212,7 @@ def on_haspRGB(mosq,obj,msg):
     logging.info("on_haspRGB: "+panel+" "+t+" "+stat)
 
     val=json.loads(stat)
-    
+
     # update things
     (h,s,v)=colorsys.rgb_to_hsv(int(val["r"])/255,int(val["g"])/255,int(val["b"])/255)
     things[t]["hue"]=str(int(h*359))
@@ -224,7 +226,7 @@ def on_haspRGB(mosq,obj,msg):
             client.publish(tuya_pre+"/"+d+"/hsb_command",hsv)
         else:
             logging.info("unknown device type for: "+t)
-    
+
 
 def on_haspCBright(mosq,obj,msg):
     global lp
@@ -274,7 +276,7 @@ def on_haspSat(mosq,obj,msg):
 
 
 
-            
+
 def haspShow(thing):
     global lp
     global things
@@ -294,11 +296,11 @@ def haspShow(thing):
             client.publish(hasp_pre+"/"+p+"/command/"+cfg["hasp_details"][p]["cbrightness"]+".val",things[thing]["cbrightness"])
             client.publish(hasp_pre+"/"+p+"/command/"+cfg["hasp_details"][p]["saturation"]+".val",things[thing]["saturation"])
 
-    
+
     for p in cfg["thing"][thing]["panel"].keys():
         for b in cfg["thing"][thing]["panel"][p]:
             logging.info("show: "+thing+" "+cfg["hasp"][p][b]["type"])
-            if cfg["hasp"][p][b]["type"] == "tuyabutton":      
+            if cfg["hasp"][p][b]["type"] == "tuyabutton":
                 if things[thing]["state"]=="ON":
                     client.publish(hasp_pre+"/"+p+"/command/"+b+".val","1")
                     if things[thing]["mode"]=="white":
@@ -321,10 +323,16 @@ def haspShow(thing):
                 else:
                     client.publish(hasp_pre+"/"+p+"/command/"+cfg["hasp"][p][b]["color"],cfg["hasp_color"][0])
                     client.publish(hasp_pre+"/"+p+"/command/"+cfg["hasp"][p][b]["text"],things[thing]["state"])
-                    
+            elif cfg["hasp"][p][b]["type"] == "text":
+                if "json" in cfg["hasp"][p][b]:
+                    text=str(things[thing]["sp1"][cfg["hasp"][p][b]["json"]])
+                else:
+                    text=str(things[thing]["sp1"])
+                # text=str(things[thing]["sp1"][cfg["hasp"][p][b]["json"]]   ["power_curr"])
+                client.publish(hasp_pre+"/"+p+"/command/"+cfg["hasp"][p][b]["text"],cfg["hasp"][p][b]["pre"]+text+cfg["hasp"][p][b]["post"])
 
 
-                    
+
 def on_TUYAstate(mosq,obj,msg):
     d=msg.topic.split("/")[1]
     stat=str(msg.payload.decode("utf-8"))
@@ -334,7 +342,7 @@ def on_TUYAstate(mosq,obj,msg):
         things[t]["state"]=stat
     else:
         logging.info("E stat unknown: "+msg.topic+" "+stat)
-        things[t]["state"]="unknown"        
+        things[t]["state"]="unknown"
     haspShow(t)
 
 def on_TUYAmode(mosq,obj,msg):
@@ -371,7 +379,7 @@ def on_TUYAcbright(mosq,obj,msg):
 
 def on_TUYAhsb(mosq,obj,msg):
     global things
-    
+
     d=msg.topic.split("/")[1]
     stat=str(msg.payload.decode("utf-8"))
     t=dev_thing[d]
@@ -385,7 +393,7 @@ def on_TUYAhsb(mosq,obj,msg):
 
 def on_SP1Power(mosq,obj,msg):
     global things
-    
+
     d=msg.topic.split("/")[1]
     stat=str(msg.payload.decode("utf-8"))
     t=dev_thing[d]
@@ -394,7 +402,7 @@ def on_SP1Power(mosq,obj,msg):
         things[t]["state"]=stat
     else:
         logging.info("stat unknown: "+msg.topic++stat)
-        things[t]["state"]="unknown"        
+        things[t]["state"]="unknown"
     haspShow(t)
 
 def on_SP1Status8(mosq,obj,msg):
@@ -405,11 +413,11 @@ def on_SP1Status8(mosq,obj,msg):
     t=dev_thing[d]
     logging.info("on_SP1Status8: "+t+"->"+stat)
 
-    things[t]["sp1"]=json.loads(stat)["StatusSNS"]["ENERGY"] 
+    things[t]["sp1"]=json.loads(stat)["StatusSNS"]["ENERGY"]
 
     haspShow(t)
 
-    
+
 def on_SP1State(mosq,obj,msg):
     global things
 
@@ -426,7 +434,7 @@ def on_SP1State(mosq,obj,msg):
         things[t]["state"]=power
     else:
         logging.info("stat unknown: ",msg.topic,stat)
-        things[t]["state"]="unknown" 
+        things[t]["state"]="unknown"
     haspShow(t)
 
 
@@ -438,8 +446,8 @@ def on_SP1Sensor(mosq,obj,msg):
     t=dev_thing[d]
     logging.info("on_SP1Sensor: "+t+"->"+stat)
 
-    things[t]["sp1"]=json.loads(stat)["ENERGY"] 
-    
+    things[t]["sp1"]=json.loads(stat)["ENERGY"]
+
     haspShow(t)
 
 
@@ -455,6 +463,35 @@ def on_SP1LWT(mosq,obj,msg):
         things[t]["state"]="offline"
         haspShow(t)
 
+def on_Sensor(mosq,obj,msg):
+    global things
+
+    t=msg.topic.split("/")
+    if t[0] == "tele":
+        d=t[1]
+    else:
+        d=t[0]
+    stat=str(msg.payload.decode("utf-8"))
+    t=dev_thing[d]
+    logging.info("on_Sensor: "+t+"->"+stat)
+    if "json" in cfg["dev"][cfg["thing"][t]["dev"][0]]:
+        things[t]["sp1"]=json.loads(stat)[cfg["dev"][cfg["thing"][t]["dev"][0]]["json"]]
+    else:
+        things[t]["sp1"]=stat
+    haspShow(t)
+
+def on_SensorLWT(mosq,obj,msg):
+    global things
+
+    d=msg.topic.split("/")[1]
+    stat=str(msg.payload.decode("utf-8"))
+    t=dev_thing[d]
+    logging.info("on_SensorLWT: "+t+"->"+stat)
+
+    if stat=="Offline":
+        things[t]["state"]="offline"
+        haspShow(t)
+
 def on_Connect(mosq,obj,msg):
     global connect
 
@@ -464,11 +501,11 @@ def on_Connect(mosq,obj,msg):
     logging.info("Slave: "+cfg["connect"][c]["slave"]+" "+json.loads(stat)["state"])
     if cfg["connect"][c]["type"]=="hasp":
         client.publish(cfg["connect"][c]["slave"],json.loads(stat)["state"])
-    
 
-    
+
+
 # --------------------------------
-# Start 
+# Start
 # --------------------------------
 
 parser = argparse.ArgumentParser()
@@ -527,7 +564,7 @@ for t in cfg["thing"].keys():
 
 logging.info("----")
 logging.info("T: ",things)
-logging.info("~~~~")    
+logging.info("~~~~")
 
 hasp_thing={}
 
@@ -613,7 +650,7 @@ for t in cfg["thing"].keys():
         client.message_callback_add(tuya_pre+"/"+d+"/color_brightness_state", on_TUYAcbright)
         client.message_callback_add(tuya_pre+"/"+d+"/hsb_state", on_TUYAhsb)
         client.message_callback_add(tuya_pre+"/"+d+"/hs_brightness_state", on_TUYAhsb)
-                                    
+
     elif cfg["dev"][d]["type"] in ["sp1"]:
         logging.info("on_SP1state cmnd/"+d+"/state")
         client.message_callback_add("stat/"+d+"/POWER", on_SP1Power)
@@ -622,9 +659,18 @@ for t in cfg["thing"].keys():
         client.message_callback_add("tele/"+d+"/STATE", on_SP1State)
         client.message_callback_add("tele/"+d+"/SENSOR", on_SP1Sensor)
         client.message_callback_add("tele/"+d+"/LWT", on_SP1LWT) # Offline/Online
-        
+
+    elif cfg["dev"][d]["type"] in ["sensor"]:
+        if "mqtt" in cfg["dev"][d]:
+            logging.info("on_SENSOR> "+cfg["dev"][d]["mqtt"])
+            client.message_callback_add(cfg["dev"][d]["mqtt"], on_Sensor)
+        else:
+            logging.info("on_SENSOR> tele/"+d+"/SENSOR")
+            client.message_callback_add("tele/"+d+"/SENSOR", on_Sensor)
+            client.message_callback_add("tele/"+d+"/LWT", on_SensorLWT) # Offline/Online
+
     else:
-        logging.info("unkown device type to register: ",cfg["dev"][d]["type"])
+        logging.info("unkown device type to register: "+cfg["dev"][d]["type"])
 
 
 connect={}

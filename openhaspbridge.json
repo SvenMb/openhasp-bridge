@@ -6,9 +6,11 @@
     "hasp_pre":"hasp",
     "hasp_dev":["wozi"],
     "hasp_color":["black","#404000"],
+    "mqtt_pre":["solar"],
     "tuya_pre":"tuya",
     "debug":{
-            "loglevel":"INFO",
+            "comment_loglevel":"INFO",
+            "loglevel":"WARNING",
 	    "comment_logfile":"/var/log/openhaspbridge.log"
     },
     "hasp_details":{
@@ -77,7 +79,35 @@
                 "type":"sp1button",
                 "text":"p4b35.text",
                 "color":"p4b32.bg_color"
-            }
+            },
+            "p5b10":{
+                "type":"sp1button",
+                "text":"p5b15.text",
+                "color":"p5b12.bg_color"
+            },
+            "p5b20":{
+                "type":"sp1button",
+                "text":"p5b25.text",
+                "color":"p5b22.bg_color"
+            },
+            "p5b30":{
+                "type":"sp1button",
+                "text":"p5b35.text",
+                "color":"p5b32.bg_color"
+            },
+	    "p2b61":{
+                "type":"text",
+                "text":"p2b61.text",
+		"pre":" ",
+		"json":"power_curr",
+		"post":"W"
+	    },
+	    "p2b62":{
+                "type":"text",
+                "text":"p2b62.text",
+		"pre":" ",
+		"post":"W"
+	    }
         }
     },
     "dev":{
@@ -130,21 +160,42 @@
         "fische":{
             "type":"sp1"
         },
+        "ozzi":{
+            "type":"sp1"
+        },
         "horst":{
             "type":"sp1"
         },
-        "ozzi":{
+        "esszimmer":{
             "type":"sp1"
-        },        
+        },
+        "kuehlschrank":{
+            "type":"sp1"
+        },
+        "tiefkuehler":{
+            "type":"sp1"
+        },
         "Buero":{
             "type":"sp1"
         },
         "3d_druck":{
             "type":"sp1"
         },
+        "pool":{
+            "type":"sp1"
+        },
         "baum":{
             "type":"sp1"
-        }        
+        },
+	"smartmeter":{
+	    "type":"sensor",
+	    "mqtt":"tele/smartmeter/SENSOR",
+	    "json":"DWS7420"
+	},
+	"solar":{
+	    "type":"sensor",
+	    "mqtt":"solar/ac/power"
+	}
     },
     "thing":{
         "Standleuchte":{
@@ -167,26 +218,46 @@
             "panel":{"wozi":["p3b10"]},
             "dev":["fische"]
         },
-        "Horst":{
-            "panel":{"wozi":["p3b20"]},
-            "dev":["horst"]
-        },
         "Ozzi":{
-            "panel":{"wozi":["p3b30"]},
+            "panel":{"wozi":["p3b20"]},
             "dev":["ozzi"]
         },
-        "Pool":{
+        "Horst":{
+            "panel":{"wozi":["p3b30"]},
+            "dev":["horst"]
+        },
+        "EDV":{
+            "panel":{"wozi":["p4b30"]},
+            "dev":["esszimmer"]
+        },
+        "Kuehlschrank":{
             "panel":{"wozi":["p4b10"]},
-            "dev":["Buero"]
+            "dev":["kuehlschrank"]
+        },
+        "Tiefkuehler":{
+            "panel":{"wozi":["p4b20"]},
+            "dev":["tiefkuehler"]
         },
         "3D":{
-            "panel":{"wozi":["p4b20"]},
+            "panel":{"wozi":["p5b10"]},
             "dev":["3d_druck"]
         },
+        "Pool":{
+            "panel":{"wozi":["p5b20"]},
+            "dev":["pool"]
+        },
         "Baum":{
-            "panel":{"wozi":["p4b30"]},
+            "panel":{"wozi":["p5b30"]},
             "dev":["baum"]
-        }
+        },
+	"Strom":{
+            "panel":{"wozi":["p2b61"]},
+            "dev":["smartmeter"]
+	},
+	"Solar":{
+            "panel":{"wozi":["p2b62"]},
+            "dev":["solar"]
+	}
     },
     "connect":{
 	"Decke":{
